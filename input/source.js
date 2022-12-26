@@ -1,8 +1,6 @@
-// Example obfuscated code
-var GOD;
-var I1 = function () {
-    return [":&Ns;	4", "@%OK"]
+var xD = 1;
+var cc;
+
+function dd() {
+  cc = xD + 3;
 }
-
-GOD = I1();
-

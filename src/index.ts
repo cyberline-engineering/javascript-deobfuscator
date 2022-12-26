@@ -11,6 +11,7 @@ import Config from './config';
 import VariableRenamer from './modifications/renaming/variableRenamer';
 import FunctionExecutor from './modifications/execution/functionExecutor';
 import DeadBranchRemover from './modifications/branches/deadBranchRemover';
+import ConstantRemover from './modifications/properties/constantRemover';
 
 const defaultConfig: Config = {
     verbose: false,
@@ -44,7 +45,7 @@ export function deobfuscate(source: string, config: Config = defaultConfig): str
     const modifications: Modification[] = [];
 
     // function execution should always be checked for
-    modifications.push(new FunctionExecutor(ast));
+    modifications.push(...[new FunctionExecutor(ast), new ConstantRemover(ast)]);
 
     if (config.proxyFunctions.replaceProxyFunctions) {
         modifications.push(new ProxyRemover(ast, config.proxyFunctions.removeProxyFunctions));
@@ -73,7 +74,7 @@ export function deobfuscate(source: string, config: Config = defaultConfig): str
 
     if (config.miscellaneous.renameHexIdentifiers) {
         modifications.push(new VariableRenamer(ast));
-    }
+    }    
 
     for (const modification of modifications) {
         if (config.verbose) {

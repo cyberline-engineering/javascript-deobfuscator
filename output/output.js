@@ -1,2 +1,5 @@
-var GOD;
-GOD = [":&Ns;	4", "@%OK"];
+var XD;
+function ZgD() {
+  XD = [-dgD, -EgD, GgD, -zgD, -xgD, -RgD, HgD, -jgD];
+}
+ZgD();

@@ -21,6 +21,7 @@
         XD = [-dgD, -EgD, GgD, -zgD, -xgD, -RgD, HgD, -jgD];
     }
     var kg = function(Yg, Mg) {
+        "#execute[name=kg]"
         return Yg & Mg;
     };
     var vg = function() {
@@ -5857,7 +5858,8 @@
     var cH = function(NhD, mhD) {
         return NhD instanceof mhD;
     };
-    function bgD() {
+    function bgD() {        
+        '#execute';
         xN = TO + YO * KO + YO * KO * KO + KO * KO * KO,
         M2 = kO + LO * KO + CO * KO * KO,
         OF = LO + TO * KO + MO * KO * KO,
@@ -7138,6 +7140,7 @@
     };
     var qf;
     function CgD() {
+        '#execute';
         vO = !+[] + !+[] + !+[] + !+[],
         LO = +[],
         TO = [+!+[]] + [+[]] - +!+[] - +!+[],
@@ -7213,7 +7216,7 @@
     var P2D;
     var Vf;
     var Oc;
-    function ID() {
+    function ID() {        
         DD = {};
         if (typeof window !== '' + [][[]]) {
             sD = window;
